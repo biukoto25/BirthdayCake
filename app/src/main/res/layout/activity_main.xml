@@ -8,51 +8,98 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:id="@+id/hBdayTv"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="Happy Birthday!" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
         <!--        CakeView is a custom SurfaceView that is defined in the app's source code -->
         <cs301.birthdaycake.CakeView
             android:id="@+id/cakeview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_height="match_parent" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="left"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HOORAY!!" />
+            android:layout_weight="3"
+            android:orientation="vertical">
 
-        <Switch
-            android:id="@+id/switch1"
+            <TextView
+                android:id="@+id/candlesTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="How many candles?" />
+
+            <SeekBar
+                android:id="@+id/candleNumSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:max="5"
+                android:progress="2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <Switch
+                android:id="@+id/candlesSwitch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Candles" />
+
+            <Switch
+                android:id="@+id/frostingSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Frosting" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Frosting" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="yay..." />
+            <Button
+                android:id="@+id/blowOutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blow Out" />
 
+            <Button
+                android:id="@+id/goodbyeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="goodbye"
+                android:text="Goodbye" />
+        </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>
