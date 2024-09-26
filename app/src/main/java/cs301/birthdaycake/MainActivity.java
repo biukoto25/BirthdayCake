@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         CakeController newCC = new CakeController(newCV);
 
         //retrieve a reference to "Blow Out" button
-        Button boButt = findViewById(R.id.blowOutButton);
+        Button boButt = findViewById(R.id.Extinguish);
         CompoundButton switchCandle = findViewById(R.id.candlesSwitch2);
         SeekBar numCandles = findViewById(R.id.candleNumSeekBar);
 
